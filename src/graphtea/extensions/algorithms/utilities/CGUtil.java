@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package graphtea.extensions.algorithms;
+package graphtea.extensions.algorithms.utilities;
 
 import graphtea.extensions.algorithms.structures.LineSegment;
 import graphtea.graph.graph.GraphPoint;
@@ -10,7 +10,8 @@ import graphtea.graph.graph.Vertex;
 
 /**
  *
- * @author ASUS
+ * @author Mohsen Mansouryar (mansouryar@cs.sharif.edu)
+ * @author Saman Jahangiri (saman_jahangiri@math.sharif.edu)
  */
 public class CGUtil {
 

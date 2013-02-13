@@ -4,19 +4,19 @@
  */
 package graphtea.extensions.algorithms.structures;
 
-import graphtea.extensions.algorithms.CGUtil;
+import graphtea.extensions.algorithms.utilities.CGUtil;
 import graphtea.graph.graph.GraphPoint;
 import graphtea.graph.graph.Vertex;
 
 /**
  *
- * @author ASUS
+ * @author Mohsen Mansouryar (mansouryar@cs.sharif.edu)
+ * @author Saman Jahangiri (saman_jahangiri@math.sharif.edu)
  */
 public class LineSegment implements Comparable<LineSegment> {
 
     public LSVertex p, v;
     private LSVertex compareNode;
-//    private boolean isCompareNodeSwitched = false;
     int id;
     private static int idC = 0;
 
@@ -32,12 +32,6 @@ public class LineSegment implements Comparable<LineSegment> {
         return compareNode;
     }
 
-//    public void switchCompareNode() {
-//        if (!isCompareNodeSwitched) {
-//            this.compareNode = this.compareNode.getNeighbor();
-//            isCompareNodeSwitched = true;
-//        }
-//    }
     public void updateCompareNode(double sweepLineY, double offset) {
         Vertex v1 = new Vertex(), v2 = new Vertex();
         v1.setLocation(new GraphPoint(this.p.getLocation().x, sweepLineY + offset));

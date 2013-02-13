@@ -12,10 +12,10 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Stack;
 
-import graphtea.extensions.algorithms.CGUtil;
+import graphtea.extensions.algorithms.utilities.CGUtil;
 /**
- * author: mmbrian
- * author: saman jahangiri
+ * author: @author Mohsen Mansouryar (mansouryar@cs.sharif.edu)
+ * author: Saman Jahangiri (saman_jahangiri@math.sharif.edu)
  */
 public class ConvexHull extends GraphAlgorithm implements AlgorithmExtension {
 

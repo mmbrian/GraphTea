@@ -57,6 +57,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Class Definitions
+/**
+ * 
+ * modified by Mohsen Mansouryar (mansouryar@cs.sharif.edu)
+ * @param <T> 
+ */
 public class RedBlackTree<T extends Comparable<T>> {
 
     // Root initialized to nil.

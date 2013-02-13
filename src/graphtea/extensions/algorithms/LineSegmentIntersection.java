@@ -4,6 +4,7 @@
  */
 package graphtea.extensions.algorithms;
 
+import graphtea.extensions.algorithms.utilities.CGUtil;
 import graphtea.extensions.algorithms.structures.RedBlackNode;
 import graphtea.extensions.algorithms.structures.LineSegment;
 import graphtea.extensions.algorithms.structures.RedBlackTree;
@@ -25,7 +26,8 @@ import java.util.Set;
 
 /**
  *
- * @author ASUS
+ * @author Mohsen Mansouryar (mansouryar@cs.sharif.edu)
+ * @author Saman Jahangiri (saman_jahangiri@math.sharif.edu)
  */
 public class LineSegmentIntersection extends GraphAlgorithm implements AlgorithmExtension {
 

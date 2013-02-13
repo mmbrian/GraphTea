@@ -9,7 +9,8 @@ import javax.print.attribute.standard.MediaSize;
 
 /**
  *
- * @author ASUS
+ * @author Mohsen Mansouryar (mansouryar@cs.sharif.edu)
+ * @author Saman Jahangiri (saman_jahangiri@math.sharif.edu)
  */
 public class LSVertex extends Vertex implements Comparable<LSVertex> {
     
