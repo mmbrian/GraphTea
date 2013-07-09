@@ -206,35 +206,31 @@ public class RedBlackTree<T extends Comparable<T>> {
 
     }// end rightRotateFixup(RedBlackNode y)
 
-    public void insert(T key) {
-        insert(new RedBlackNode<T>(key));
+    public RedBlackNode<T> insert(T key) {
+        return insert(new RedBlackNode<T>(key));
     }
 
     // @param: z, the node to be inserted into the Tree rooted at root
     // Inserts z into the appropriate position in the RedBlackTree while
     // updating numLeft and numRight values.
-    private void insert(RedBlackNode<T> z) {
+    private RedBlackNode<T> insert(RedBlackNode<T> z) {
 
         // Create a reference to root & initialize a node to nil
         RedBlackNode<T> y = nil;
         RedBlackNode<T> x = getRoot();
 
-        System.out.println("New insert");
         // While we haven't reached a the end of the tree keep
         // tryint to figure out where z should go
         while (!isNil(x)) {
             y = x;
 
             // if z.key is < than the current key, go left
-//            if (z.key.compareTo(x.key) < 0) {
             if (x.key.compareTo(z.key) > 0) {
-                System.out.println("target is on left");
                 // Update x.numLeft as z is < than x
                 x.numLeft++;
                 x = x.left;
             } // else z.key >= x.key so go right.
             else {
-                System.out.println("target is on right");
                 // Update x.numGreater as z is => x
                 x.numRight++;
                 x = x.right;
@@ -259,15 +255,14 @@ public class RedBlackTree<T extends Comparable<T>> {
         z.color = RedBlackNode.RED;
 
         // Call insertFixup(z)
-        insertFixup(z);
-
+        return insertFixup(z);
     }// end insert(RedBlackNode z)
 
     // @param: z, the node which was inserted and may have caused a violation
     // of the RedBlackTree properties
     // Fixes up the violation of the RedBlackTree properties that may have
     // been caused during insert(z)
-    private void insertFixup(RedBlackNode<T> z) {
+    private RedBlackNode<T> insertFixup(RedBlackNode<T> z) {
 
         RedBlackNode<T> y = nil;
         // While there is a violation of the RedBlackTree properties..
@@ -327,6 +322,7 @@ public class RedBlackTree<T extends Comparable<T>> {
         // Color root black at all times
         root.color = RedBlackNode.BLACK;
 
+        return z;
     }// end insertFixup(RedBlackNode z)
 
     // @param: node, a RedBlackNode
@@ -620,19 +616,15 @@ public class RedBlackTree<T extends Comparable<T>> {
 
         // While we haven't reached the end of the tree
         while (!isNil(current)) {
-            System.out.println("New search");
             // If we have found a node with a key equal to key
             if (current.key.equals(key)) // return that node and exit search(int)
             {
-                System.out.println("target equals current tree node " + current.key.toString());
                 return current;
             } // go left or right based on value of current and key
             else if (current.key.compareTo(key) < 0) {
-                System.out.println("target is on right subtree");
                 current = current.right;
             } // go left or right based on value of current and key
             else {
-                System.out.println("target is on left subtree");
                 current = current.left;
             }
         }
@@ -785,10 +777,8 @@ public class RedBlackTree<T extends Comparable<T>> {
         
         RedBlackNode<T> next = this.treeMinimum(this.getRoot());
         
-        System.out.println("Entered inOrder > found minimum vertex");
         if (next.key instanceof Vertex) {
             Vertex v = (Vertex) next.key;
-            System.out.println("Minimum is " + v.getLabel());
         }
         
         while (!isNil(next)) {

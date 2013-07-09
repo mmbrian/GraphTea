@@ -318,6 +318,10 @@ public class GraphModel extends ListGraph<Vertex, Edge> implements StorableOnExi
 			}
 		}
 	}
+        
+        public void repaint() {
+            fireGraphChange(REPAINT_GRAPH_GRAPH_CHANGE, null, null);
+        }
 	// -            GraphModelListener
 
 	/**

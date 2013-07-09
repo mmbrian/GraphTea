@@ -1,12 +1,11 @@
 package graphtea.extensions.algorithms;
 
+import graphtea.extensions.algorithms.utilities.CGAlgorithm;
 import graphtea.graph.graph.Edge;
 import graphtea.graph.graph.GraphModel;
 import graphtea.graph.graph.Vertex;
 import graphtea.library.exceptions.InvalidEdgeException;
 import graphtea.platform.core.BlackBoard;
-import graphtea.plugins.algorithmanimator.core.GraphAlgorithm;
-import graphtea.plugins.algorithmanimator.extension.AlgorithmExtension;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -14,10 +13,10 @@ import java.util.Stack;
 
 import graphtea.extensions.algorithms.utilities.CGUtil;
 /**
- * author: @author Mohsen Mansouryar (mansouryar@cs.sharif.edu)
- * author: Saman Jahangiri (saman_jahangiri@math.sharif.edu)
+ * @author Mohsen Mansouryar (mansouryar@cs.sharif.edu)
+ * @author Saman Jahangiri (saman_jahangiri@math.sharif.edu)
  */
-public class ConvexHull extends GraphAlgorithm implements AlgorithmExtension {
+public class ConvexHull extends CGAlgorithm {
 
     public ConvexHull(BlackBoard blackBoard) {
         super(blackBoard);

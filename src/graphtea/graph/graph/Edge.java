@@ -193,7 +193,7 @@ public class Edge extends BaseEdge<Vertex> {
         repaintView();
     }
 
-    private void repaintView() {
+    void repaintView() {
         if (view != null) {
             view.repaint(this);
         }
